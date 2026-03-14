@@ -4,6 +4,7 @@ Lightweight VPS setup for hosting websites and services behind Cloudflare.
 
 ## Stack
 
+- UFW - Firewall blocking all IPs, closing all ports to only allow Cloudflare IPs
 - [Traefik](https://traefik.io/) - Reverse proxy and SSL termination
 - [Cloudflared](https://www.cloudflare.com/products/tunnel/) - Zero Trust tunnel for SSH access
 - [WordPress](https://wordpress.org/) - Content management system
@@ -62,6 +63,12 @@ Lightweight VPS setup for hosting websites and services behind Cloudflare.
 7. Verify services are running:
    ```bash
    docker compose ps
+   ```
+   
+8. Install UFW and import rules
+   ```bash
+   cd ufw
+   # Follow instructions in ufw/readme.md
    ```
 
 ## Service URLs
