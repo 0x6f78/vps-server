@@ -2,6 +2,11 @@
 
 set -e
 
+echo -e "\033[0;35m[INFO] Installing Cloudflared\033[0m"
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+sudo dpkg -i cloudflared.deb
+echo -e "\033[0;35m[INFO] Cloudflared Installed\033[0m"
+
 echo -e "\033[0;35m[INFO] Installing Docker Prerequisites\033[0m"
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg lsb-release

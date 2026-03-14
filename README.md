@@ -5,6 +5,7 @@ Lightweight VPS setup for hosting websites and services behind Cloudflare.
 ## Stack
 
 - [Traefik](https://traefik.io/)
+- Coudflared
 - [WordPress](https://wordpress.org/)
 - [WooCommerce](https://woocommerce.org/)
 - Docker & Docker Compose
@@ -14,7 +15,7 @@ Lightweight VPS setup for hosting websites and services behind Cloudflare.
 - Secure reverse proxy routing via Traefik
 - Containerized application environments
 - Automatic SSL certificates with Let's Encrypt
-- Cloudflare integration for DNS and proxy
+- Cloudflared for SSH through Cloudflare proxy
 
 ## Usage
 
