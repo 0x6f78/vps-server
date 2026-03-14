@@ -6,3 +6,6 @@
 **/www
 **/db/
 **/uploads/
+/backups/boo/*
+/backups/wordpress/*
+/backups/woocommerce/*
