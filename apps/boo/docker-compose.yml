@@ -1,12 +1,14 @@
 services:
   web:
-    image: nginx:alpine
+    image: richarvey/nginx-php-fpm:latest
     container_name: boo-web
     restart: unless-stopped
     volumes:
-      - ./www:/usr/share/nginx/html:ro
+      - ./www:/var/www/html:ro
     networks:
       - traefik-public
+    environment:
+      - SERVER_NAME=localhost
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.boo.rule=Host(`${DOMAIN}`)"
